@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="display">
+            <div id="display-number">#</div>   
+        </div>
+        <div class="keypad">
+        <div class="row">
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+        </div>
+        <div class="row">
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+        </div> 
+        <div class="row">
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+        </div>
+        <div class="row">
+            <button id="backspace" class="number">&#9003;</button>
+            <button class="number">0</button>
+            <button class="number hidden">i</button>
+        </div>
+        </div>
+    </body>
+    <script>
+        
+        
+        var numbers = document.getElementsByClassName('number');
+        console.log(numbers.length);
+        for(i=0; i<numbers.length;i++){
+            numbers[i].addEventListener('click', function(event){
+            var output = document.getElementById('display-number');
+                if(output.innerHTML=='#'){output.innerHTML='';}
+                if(this.id=="backspace"){output.innerHTML="";}
+                if(output.innerHTML.length<10 && this.id !="backspace"){
+                        output.innerHTML+=this.innerHTML;
+                    }
+        });
+
+        }
+        
+        
+        
+        
+    </script>
+</html>
