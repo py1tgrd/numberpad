@@ -16,6 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     background: var(--color-background);
+	touch-action: manipulation;
 }
 
 #display{
@@ -48,10 +49,10 @@ body{
 }
 .row{
     display: flex;
-	flex: 0 1 auto;
+	flex: 1 1 auto;
     justify-content: center;
     align-content: start;
-    align-items: center;
+    align-items: stretch;
 }
 
 .number:nth-child(1){background: var(--color-blue);}
@@ -109,7 +110,7 @@ button:focus{
 	
 	
 	#display-number {
-		height: 2rem;
+		height: 4rem;
 		margin: 0.5rem 0.5rem 0rem 0.5rem;
 	}
   
