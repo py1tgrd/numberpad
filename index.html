@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="./style.css">
         <meta charset="UTF-8">
     </head>
-    <body>
+    <body onload="loading()">
         <div id="display">
             <div id="display-number"></div>   
         </div>
@@ -30,23 +30,24 @@
         </div>
         </div>
     </body>
-    <script>
-        
-        
-        var numbers = document.getElementsByClassName('number');
-        console.log(numbers.length);
-        for(i=0; i<numbers.length;i++){
-            numbers[i].addEventListener('click', function(event){
-            var output = document.getElementById('display-number');
-                if(output.innerHTML=='#'){output.innerHTML='';}
-                if(this.id=="backspace"){output.innerHTML="";}
-                if(output.innerHTML.length<20 && this.id !="backspace"){
-                        output.innerHTML+=this.innerHTML;
-                    }
-        });
+    
 
-        }
+<script>
+	function loading(){
+		var numbers = document.getElementsByClassName('number');	
+        for(i=0; i<numbers.length;i++){numbers[i].addEventListener('click', checkButtonPress);}
+    }
         
+	function checkButtonPress(){
+		
+		var output = document.getElementById('display-number');
+                if(this.id=="backspace"){
+					output.innerHTML="";
+				}else{
+					if(output.innerHTML.length<20){output.innerHTML+=this.innerHTML;}
+				}
+	}
+
         
         
         
