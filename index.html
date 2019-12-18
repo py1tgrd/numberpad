@@ -1,4 +1,4 @@
-<html>
+	<html>
     <head>
         <link rel="stylesheet" type="text/css" href="./style.css">
         <meta charset="UTF-8">
@@ -40,7 +40,7 @@
             var output = document.getElementById('display-number');
                 if(output.innerHTML=='#'){output.innerHTML='';}
                 if(this.id=="backspace"){output.innerHTML="";}
-                if(output.innerHTML.length<10 && this.id !="backspace"){
+                if(output.innerHTML.length<20 && this.id !="backspace"){
                         output.innerHTML+=this.innerHTML;
                     }
         });
