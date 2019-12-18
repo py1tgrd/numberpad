@@ -39,7 +39,7 @@
     }
         
 	function checkButtonPress(){
-		
+		window.navigator.vibrate(200); // vibrate for 200ms
 		var output = document.getElementById('display-number');
                 if(this.id=="backspace"){
 					output.innerHTML="";
