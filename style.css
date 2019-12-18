@@ -31,10 +31,11 @@ body{
 	display:flex;
 	flex: 1 1 auto;
     justify-content:flex-end;
+	align-items:center;
     overflow: hidden;
-    height: 2.5rem;
-    width:14rem;
+    height: 5rem;
     letter-spacing: 0.2rem;
+	font-size:2rem;
     margin: 0.5rem; 
 	padding:0 0.5rem;
     background: white;
