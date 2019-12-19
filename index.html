@@ -35,6 +35,8 @@
         </div>
         </div>
 	</div>
+	<audio id="audio" src="./sounds/ui_tap-variant-01.wav"></audio>
+	<audio id="audio-clear" src="./sounds/navigation_selection-complete-celebration.wav"></audio>
     </body>
     
 
@@ -45,12 +47,14 @@
     }
         
 	function checkButtonPress(){
-		window.navigator.vibrate(200); // vibrate for 200ms
+		//window.navigator.vibrate(200); // vibrate for 200ms
 		var output = document.getElementById('display-number');
                 if(this.id=="backspace"){
+					document.getElementById("audio-clear").play();
 					setTimeout(clearDisplay,400);
 					output.classList.add("clear");
 				}else{
+					document.getElementById("audio").play();
 					if(output.innerHTML.length<20){output.value+=this.innerHTML;}
 					output.classList.remove("clear");
 				}
@@ -59,6 +63,7 @@
     function clearDisplay(){
 
 		document.getElementById('display-number').value="";
+		
 	}    
         
         

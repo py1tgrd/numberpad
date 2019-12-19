@@ -41,7 +41,7 @@ body{
     justify-content: center;
     min-height: 2rem;
     padding: 0rem 0 0rem 0;
-	border-bottom: 1pt solid;
+	
 }
 
 input[type=text]{
@@ -64,7 +64,7 @@ input[type=text]{
 	padding:0 0.5rem;
     background: white;
     border-radius: 20px;
-	
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .keypad{
@@ -90,6 +90,7 @@ button{
     background: none;
     color: inherit;
     font: inherit; 
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	touch-action: manipulation;
 }
 
