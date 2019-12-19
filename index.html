@@ -10,7 +10,7 @@
     <body onload="loading()">
 	<div class="container">
         <div id="display">
-            <div id="display-number"></div>   
+            <input type="text" id="display-number"></input>   
         </div>
         <div class="keypad">
         <div class="row">
@@ -48,17 +48,17 @@
 		window.navigator.vibrate(200); // vibrate for 200ms
 		var output = document.getElementById('display-number');
                 if(this.id=="backspace"){
-					setTimeout(clearDisplay,900);
+					setTimeout(clearDisplay,400);
 					output.classList.add("clear");
 				}else{
-					if(output.innerHTML.length<20){output.innerHTML+=this.innerHTML;}
+					if(output.innerHTML.length<20){output.value+=this.innerHTML;}
 					output.classList.remove("clear");
 				}
 	}
 
     function clearDisplay(){
 
-		document.getElementById('display-number').innerHTML="";
+		document.getElementById('display-number').value="";
 	}    
         
         
