@@ -10,6 +10,7 @@
     --color-green:#60bd64;
     --color-yellow:#faa73f;
     --color-red:#e76762;
+	--color-bright-yellow:#F7E993;
 }
 
 body{
@@ -128,6 +129,11 @@ button:focus{
 #backspace{
     background: var(--color-red);
 }
+
+#speech{
+    background: var(--color-bright-yellow);
+}
+
 
 .clear{
 	animation-name: shake;

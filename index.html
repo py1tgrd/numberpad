@@ -2,7 +2,8 @@
     <head>
         <link rel="stylesheet" type="text/css" href="./style.css">
         <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<meta name="theme-color" content="#b8edff">
 		<title>Number pad</title>
 		
@@ -29,7 +30,8 @@
             <button class="number">9</button>
         </div>
         <div class="row">
-            <button class="number hidden">i</button>
+            <button id="speech" class="number">&#128264;
+</button>
             <button class="number">0</button>
 			<button id="backspace" class="number">&#9003;</button>
         </div>
@@ -53,7 +55,12 @@
 					document.getElementById("audio-clear").play();
 					setTimeout(clearDisplay,400);
 					output.classList.add("clear");
-				}else{
+				}else if(this.id=="speech"){
+					var a = document.getElementById('display-number').value;			
+					var utterance = new SpeechSynthesisUtterance(a);
+					window.speechSynthesis.speak(utterance);
+				}
+				else{
 					document.getElementById("audio").play();
 					if(output.innerHTML.length<20){output.value+=this.innerHTML;}
 					output.classList.remove("clear");
@@ -61,9 +68,7 @@
 	}
 
     function clearDisplay(){
-
 		document.getElementById('display-number').value="";
-		
 	}    
         
         
