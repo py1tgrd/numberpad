@@ -50,7 +50,7 @@
 		window.navigator.vibrate(200); // vibrate for 200ms
 		var output = document.getElementById('display-number');
                 if(this.id=="backspace"){
-					setTimeout(clearDisplay,1500);
+					setTimeout(clearDisplay,900);
 					output.classList.add("clear");
 				}else{
 					if(output.innerHTML.length<20){output.innerHTML+=this.innerHTML;}

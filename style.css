@@ -26,6 +26,7 @@ body{
 	display: flex;
 	flex: 1 1 auto;
     flex-direction: column;
+	justify-content:flex-start;
 	margin:0;
 	border:0;
 	touch-action: manipulation;
@@ -40,7 +41,7 @@ body{
     justify-content: center;
     min-height: 2rem;
     padding: 0rem 0 0rem 0;
-
+	border-bottom: 1pt solid;
 }
 
 #display-number{
@@ -120,7 +121,7 @@ button:focus{
 .clear{
 	animation-name: shake;
 	animation-duration: 0.7s;
-	animation-iteration-count: 2;
+	animation-iteration-count: 1;
 	animation-timing-function: ease-in;  
 }
 
@@ -141,7 +142,7 @@ button:focus{
 
 /* Media queries */
 
-
+/* Phone landscape mode */
 @media only screen and (max-height: 600px) {
 
 	*{font-size: 1.5rem;}
