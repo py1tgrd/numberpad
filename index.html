@@ -10,6 +10,7 @@
 		
     </head>
     <body onload="loading()">
+	<div class="container">
         <div id="display">
             <div id="display-number"></div>   
         </div>
@@ -35,6 +36,7 @@
 			<button id="backspace" class="number">&#9003;</button>
         </div>
         </div>
+	</div>
     </body>
     
 
@@ -48,13 +50,18 @@
 		window.navigator.vibrate(200); // vibrate for 200ms
 		var output = document.getElementById('display-number');
                 if(this.id=="backspace"){
-					output.innerHTML="";
+					setTimeout(clearDisplay,1500);
+					output.classList.add("clear");
 				}else{
 					if(output.innerHTML.length<20){output.innerHTML+=this.innerHTML;}
+					output.classList.remove("clear");
 				}
 	}
 
-        
+    function clearDisplay(){
+
+		document.getElementById('display-number').innerHTML="";
+	}    
         
         
     </script>
