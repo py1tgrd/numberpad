@@ -56,9 +56,11 @@
 					setTimeout(clearDisplay,400);
 					output.classList.add("clear");
 				}else if(this.id=="speech"){
-					var a = document.getElementById('display-number').value;			
-					var utterance = new SpeechSynthesisUtterance(a);
-					window.speechSynthesis.speak(utterance);
+					var a = document.getElementById('display-number').value;
+					if(a.length>0){
+						var utterance = new SpeechSynthesisUtterance(a);
+						window.speechSynthesis.speak(utterance);
+					}
 				}
 				else{
 					document.getElementById("audio").play();

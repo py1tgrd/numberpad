@@ -119,13 +119,6 @@ button:focus{
     visibility: hidden;
 }
 
-.number:active{
-    background-color: black;
-    color: white;
-    outline: none;
-	touch-action: manipulation;
-}
-
 #backspace{
     background: var(--color-red);
 }
@@ -133,6 +126,14 @@ button:focus{
 #speech{
     background: var(--color-bright-yellow);
 }
+
+.number:active, #backspace:active, #speech:active{
+    background-color: black;
+    color: white;
+    outline: none;
+	touch-action: manipulation;
+}
+
 
 
 .clear{
