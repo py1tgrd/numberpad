@@ -1,6 +1,6 @@
 	<html>
     <head>
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./style - Grid.css">
         <meta charset="UTF-8">
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
 		<meta name="viewport" content="width=device-width, user-scalable=no">
@@ -10,33 +10,21 @@
     </head>
     <body onload="loading()">
 	<div class="container">
-        <div id="display">
-            <input type="text" id="display-number"></input>   
-        </div>
-        <div class="keypad">
-        <div class="row">
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-        </div>
-        <div class="row">
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-        </div> 
-        <div class="row">
-            <button class="number">7</button>
-            <button class="number">8</button>
-            <button class="number">9</button>
-        </div>
-        <div class="row">
-            <button id="speech" class="number">&#128264;
-</button>
-            <button class="number">0</button>
-			<button id="backspace" class="number">&#9003;</button>
-        </div>
-        </div>
+        <div id="display"><input type="text" id="display-number" readonly></input></div>
+		<button class="number">1</button>
+		<button class="number">2</button>
+		<button class="number">3</button>
+		<button class="number">4</button>
+		<button class="number">5</button>
+		<button class="number">6</button>
+		<button class="number">7</button>
+		<button class="number">8</button>
+		<button class="number">9</button>
+		<button id="speech" class="number">&#128264;</button>
+		<button class="number">0</button>
+		<button id="backspace" class="number">&#9003;</button>
 	</div>
+	
 	<audio id="audio" src="./sounds/ui_tap-variant-01.wav"></audio>
 	<audio id="audio-clear" src="./sounds/navigation_selection-complete-celebration.wav"></audio>
     </body>
